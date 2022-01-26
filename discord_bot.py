@@ -10,13 +10,12 @@ async def on_ready():
     print(f"{bot.user} on duty!")
 
 # Bot Events:
-fun = ["bot revolution", "skynet", "Skynet", "robot revolution"]
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
     
-    if fun in message.content: # message.author.name
+    if "bot revolution" in message.content: # message.author.name
         await message.channel.send(
             f"Excuse me, what did u just say, mister {message.author.name}?"
         )
