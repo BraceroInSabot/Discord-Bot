@@ -1,8 +1,12 @@
 from discord.ext import commands
+from discord import Intents
+
 
 # How the bot will be called:
 # E.g. = >hello
-bot: object = commands.Bot(">")
+intents = Intents().all()
+intents.members = True
+bot: object = commands.Bot(command_prefix=">", intents=intents)
 
 # Bot init (Terminal)
 @bot.event
@@ -43,4 +47,4 @@ async def say_bye(ctx):
     await ctx.send(response)
 
 
-bot.run("Read the description!")
+bot.run("OTM0MjE0NTE2MjM1OTg5MDk1.GEWpib.sq2fM3qweejM1dNMeu_KI4mIEjL7xoBhr1G9sY")
